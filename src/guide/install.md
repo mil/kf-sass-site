@@ -11,7 +11,7 @@ next:
   name: Animation Maps
 ---
 
-You can either download the <a href="https://raw.githubusercontent.com/mil/kf-sass/master/dist/kf-<%= version %>.scss">single file import</a> via the latest Github relase or alternativly fetch Kf through its [NPM package](http://npmjs.com/package/kf-sass):
+You can either download the <a href="https://raw.githubusercontent.com/mil/kf-sass/master/dist/kf-<%= version %>.scss">single file import</a> via the latest Github release or alternatively fetch Kf through its [NPM package](http://npmjs.com/package/kf-sass):
 ```bash
 npm install --save kf-sass
 ```
