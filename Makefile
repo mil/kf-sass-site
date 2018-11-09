@@ -1,6 +1,6 @@
 
 ifeq ($(USE_DART_SASS),)
-	USE_DART_SASS=true
+	USE_DART_SASS=false
 endif
 ifeq ($(USE_DART_SASS),true)
 	SASS_COMPILE_COMMAND=./script/dart-scss-compile.dart src/_scss/all.scss /tmp/cssbuild.css
