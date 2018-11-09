@@ -1,0 +1,5 @@
+.kf-loop-example {
+  @include kf-loop((
+    '.a': (margin-left: (0ms: 0%, 2s: 100%))
+  ));
+}

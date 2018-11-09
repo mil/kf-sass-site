@@ -1,0 +1,26 @@
+h1.h1-home, h3 {
+  @include fz(md);
+  strong { @include fz(lg); }
+
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  padding: 20px;
+  padding-left: 0;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+
+  font-weight: normal;
+}
+
+h1.h1-home {
+  margin-top: 0;
+  margin-bottom: 10px;
+  @include fz(lg);
+}
+
+h4 {
+  font-weight: bold;
+  display: block;
+}

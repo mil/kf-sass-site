@@ -1,0 +1,28 @@
+---
+globals:
+  nav:
+    - section: {text: Guide, url: /guide }
+      nest:
+        - {text: Install, url: /guide/install }
+        - {text: Animation Maps, url: /guide/animation-maps }
+        - {text: Using Mixins, url: /guide/using-mixins }
+        - {text: Easing Animations, url: /guide/easing-animations }
+        - {text: Pipeline Functions, url: /guide/pipeline-functions }
+        - {text: Example Animations, url: /guide/example-animations }
+
+    - section: { text: Mixins , url: /mixins }
+      nest: 
+        - { text: kf, url: /mixins/kf }
+        - { text: kf-chain, url: /mixins/kf-chain }
+        - { text: kf-ease, url: /mixins/kf-ease }
+        - { text: kf-lag, url: /mixins/kf-lag }
+        - { text: kf-lead, url: /mixins/kf-lead }
+        - { text: kf-loop, url: /mixins/kf-loop }
+        - { text: kf-mirror, url: /mixins/kf-mirror }
+        - { text: kf-parallel, url: /mixins/kf-parallel }
+        - { text: kf-reverse, url: /mixins/kf-reverse }
+        - { text: kf-sleep, url: /mixins/kf-sleep }
+        - { text: kf-stagger, url: /mixins/kf-stagger }
+        - { text: kf-stretch, url: /mixins/kf-stretch }
+        - { text: kf-debug, url: /mixins/kf-debug }
+---

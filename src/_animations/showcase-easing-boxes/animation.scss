@@ -1,0 +1,29 @@
+.easing-boxes {
+  $eases: (
+    ease-in,
+    ease-out,
+    linear,
+    cubic-bezier(1,-.5, 1,1),
+    cubic-bezier(.16,1.86,.03,-1.93)
+  );
+
+  $start-pos: translateX(0);
+  $end-pos: translateX(400px);
+
+  @include kf((
+    (0ms, 5000ms, 6000ms): (
+      'div:nth-of-type(1)': ( transform: ($start-pos, nth($eases, 1)) ),
+      'div:nth-of-type(2)': ( transform: ($start-pos, nth($eases, 2)) ),
+      'div:nth-of-type(3)': ( transform: ($start-pos, nth($eases, 3)) ),
+      'div:nth-of-type(4)': ( transform: ($start-pos, nth($eases, 4)) ),
+      'div:nth-of-type(5)': ( transform: ($start-pos, nth($eases, 5)) )
+    ),
+    (2000ms, 3000ms): (
+      'div:nth-of-type(1)': ( transform: ($end-pos, nth($eases, 1)) ),
+      'div:nth-of-type(2)': ( transform: ($end-pos, nth($eases, 2)) ),
+      'div:nth-of-type(3)': ( transform: ($end-pos, nth($eases, 3)) ),
+      'div:nth-of-type(4)': ( transform: ($end-pos, nth($eases, 4)) ),
+      'div:nth-of-type(5)': ( transform: ($end-pos, nth($eases, 5)) )
+    ),
+  ));
+}

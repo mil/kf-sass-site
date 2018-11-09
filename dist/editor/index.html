@@ -1,0 +1,38 @@
+<html><head>
+    <link rel="stylesheet" href="/all.css">
+<script src="/app.js"></script>
+<script src="/sass.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Kf - Live Editor</title>
+  </head>
+  <body>
+    <div class="editor">
+      <div id="editor-left" class="editor-left">
+
+        <div class="editor-textarea-markup-wrap">
+          <textarea class="editor-textarea-markup" id="editor-textarea-markup"></textarea>
+        </div>
+        <div class="editor-textarea-styling-wrap">
+          <textarea class="editor-textarea-styling" id="editor-textarea-styling"></textarea>
+        </div>
+        <div class="editor-textarea-animation-wrap">
+          <textarea class="editor-textarea-animation" id="editor-textarea-animation"></textarea>
+        </div>
+
+        <div class="editor-bottom-bar">
+          <button class="editor-bottom-bar-button editor-button-markup">Markup</button>
+          <button class="editor-bottom-bar-button editor-button-styling">Styling</button>
+          <button class="editor-bottom-bar-button editor-button-animation">Animation</button>
+          <button class="editor-bottom-bar-button editor-button-compile">Compile</button>
+          <div class="status"></div>
+        </div>
+      </div>
+
+      <div id="editor-right" class="editor-right">
+        <iframe class="editor-iframe"></iframe>
+      </div>
+    </div>
+  
+
+</body></html>

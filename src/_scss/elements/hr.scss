@@ -1,0 +1,15 @@
+hr {
+  $s: 40px;
+
+  height: 1px;
+  //background: #e8e8e8;
+  border: none;
+  width: 100%;
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-top: $s;
+  margin-bottom: $s;
+  border-top: 1px dotted #888888;
+
+}

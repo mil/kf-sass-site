@@ -1,0 +1,107 @@
+html {
+  background: white;
+  @media only screen and (max-width: 700px) {
+    background: white;
+    box-shadow: none;
+
+    h1.h1-home {
+      padding-top: 0;
+    }
+
+    .linkbar  { 
+      position: absolute;
+      padding: 20px;
+    }
+
+    .wrap {
+      margin-top: 0;
+      flex-flow: column;
+      .mainbar, .sidebar {
+        &-header, &-header-inner {
+          position: static;
+          height: auto;
+          padding-bottom: 0;
+        }
+      }
+
+      .sidebar {
+        border-right: 1px dotted #888888;
+        border-bottom: 1px dotted #888888;
+        background: #f2f2f2;
+        margin-bottom: 0;
+        &-header-inner {
+          position: static;
+          padding-bottom: 0;
+        }
+
+        &-entries {
+          display: none;
+          flex-flow: wrap;
+          //border-bottom: 1px dotted #888888;
+          padding-bottom: 0;
+        }
+
+        .mobile-flexbreak {
+          width: 100%;
+          order: 0;
+          flex-basis: 100%;
+          height: 1px;
+          content: " ";
+          overflow: hidden;
+        }
+
+        .l2, .l3 {
+          border-right: 1px dotted #888888;
+          padding-right: 10px;
+          &:last-child {
+            border-right: none;
+            padding-right: 0;
+          }
+        }
+
+
+        .l2 { 
+          order: -1; 
+          border-right: 1px dotted #e8e8e8;
+          padding-right: 10px; 
+          margin-top: 0;
+        }
+        .l3 { margin-right: 10px; }
+
+        @for $i from 0 through 2 {
+          .l3 {
+            display: none;
+          }
+          .l2.active.group-#{$i} ~ .l3.group-#{$i} {
+            display: block;
+          }
+        }
+
+      }
+      .sidebar, .mainbar {
+        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+      }
+      .mainbar {
+        padding-left: 20px;
+        padding-top: 40px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .sidebar-header, .mainbar-header {
+        padding-bottom: 20px;
+      }
+
+      .sidebar-header {
+        border: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+

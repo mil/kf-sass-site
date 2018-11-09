@@ -1,0 +1,20 @@
+$size_map: (xlg: 3.204, xl: 1.602, lg: 1.266, md: 1, sm: 0.889, xs: 0.79);
+
+@mixin fz($size, $multiplier: 1) {
+  $line-height-multiplier: 1.5;
+  font-size: #{map-get($size_map, $size) * $multiplier}rem;
+  line-height: 1.5;
+}
+
+@function sp($size, $multiplier: 1) {
+  @return $size * 10px;
+}
+
+@function cl($c) {
+  $colors: (
+    dark: #888888,
+    gray: #e8e8e8,
+    blue: #002e7d
+  );
+  @return map-get($colors, $c);
+}

@@ -1,0 +1,5 @@
+.kf-example {
+  $animation-map: ('div': (margin-left: (0ms: 0%, 2000ms: 100%)));
+
+  @include kf($animation-map);
+}

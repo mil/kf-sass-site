@@ -1,0 +1,182 @@
+<html><head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/all.css">
+<script src="/app.js"></script>
+<script src="/sass.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    
+      <title>Kf - Sass Keyframe Animation Library</title>
+    
+  </head>
+  <body>
+    <div class="linkbar">
+      <a href="https://github.com/mil/kf-sass" target="_blank">Github</a>
+      <a href="https://www.npmjs.com/package/kf-sass" target="_blank">NPM</a>
+    </div>
+    <div class="wrap">
+      <sidebar class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-header-inner">
+      <div class="sidebar-header-overlay"></div>
+      <div class="sidebar-header-name"><a href="/"><span>K</span><span>f</span></a></div>
+      <div class="sidebar-header-subtext">Sass Keyframe Library</div>
+      <!--
+      <img class='sidebar-icon' src='/assets/github.svg'>
+      -->
+    </div>
+  </div>
+  <div class="sidebar-entries">
+    
+      <a class="l2 group-0 " href="/guide">
+        Guide
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-0 " href="/guide/install">Install</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/animation-maps">Animation Maps</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/using-mixins">Using Mixins</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/easing-animations">Easing Animations</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/pipeline-functions">Pipeline Functions</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/example-animations">Example Animations</a>
+        
+      
+    
+      <a class="l2 group-1 " href="/mixins">
+        Mixins
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf">kf</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-chain">kf-chain</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-ease">kf-ease</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lag">kf-lag</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lead">kf-lead</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-loop">kf-loop</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-mirror">kf-mirror</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-parallel">kf-parallel</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-reverse">kf-reverse</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-sleep">kf-sleep</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stagger">kf-stagger</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stretch">kf-stretch</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-debug">kf-debug</a>
+        
+      
+    
+  </div>
+</sidebar>
+
+      <main class="mainbar index">
+  
+
+  
+
+  <h1 class="h1-home"><strong>Kf</strong> is a SCSS library which makes composing CSS keyframe-based animations simple.</h1>
+<p>A single <code>@import</code> away; Kf lets you define animations in a simple <a href="/guide/animation-maps/">SCSS map format</a> and then modify and compose your animations together using a collection of self-explanatory <a href="/mixins">mixins</a>. Kf takes care of the laborious work of translating your animation into CSS keyframes, freeing you up to focus on your animation itself.</p>
+<p>You can use Kf for creating anything from simple button hovers to intricately timed and sequenced animations spanning over multiple elements (once only thought feasible by using javascript). Install via <a href="http://npmjs.com/package/kf-sass" target="_blank">NPM</a> or get the <a target="_blank" href="https://raw.githubusercontent.com/mil/kf-sass/master/dist/kf-1.0.0.scss">single-file import</a> to get started.</p>
+<p></p><div class="animation-feature example">
+  
+  <div class="animation-feature-display">
+    <div class="slide-cross-blink">
+  <div class="a"></div>
+  <div class="b"></div>
+</div>
+
+  </div>
+  <div class="tab-widget" data-active-tab="1">
+    <div class="tab-controls">
+      <button>Animation</button>
+      <button>Styling</button>
+      <button>Markup</button>
+    </div>
+
+    <div class="tab-contents">
+      <pre class="active cm-s-default source content-animation"><span class="cm-qualifier">.slide-cross-blink</span> {
+  $<span class="cm-property cm-error">slide-to-center</span>: (
+    <span class="cm-string">'.a'</span>: (<span class="cm-variable">margin-left</span>: (<span class="cm-number">0ms</span>: <span class="cm-number">0%</span>,   <span class="cm-number">1250ms</span>: <span class="cm-number">50%</span>)),
+    <span class="cm-string">'.b'</span>: (<span class="cm-variable">margin-left</span>: (<span class="cm-number">0ms</span>: <span class="cm-number">100%</span>, <span class="cm-number">1250ms</span>: <span class="cm-number">50%</span>)),
+  );
+  $<span class="cm-property cm-error">blink-div</span>: (
+    <span class="cm-string">'.b'</span>: (
+      <span class="cm-atom">background</span>: (<span class="cm-number">0ms</span>: <span class="cm-keyword">white</span>, <span class="cm-number">100ms</span>: <span class="cm-keyword">black</span>, <span class="cm-number">200ms</span>: <span class="cm-keyword">white</span>)
+    )
+  );
+
+  <span class="cm-def">@include</span> <span class="cm-tag">kf-chain</span>(
+    $<span class="cm-tag">slide-to-center</span>,
+    <span class="cm-tag">kf-loop</span>(<span class="cm-number">4</span>, $<span class="cm-tag">blink-div</span>),
+    <span class="cm-tag">kf-reverse</span>($<span class="cm-tag">slide-to-center</span>)
+  );
+}
+</pre>
+      <pre class="source cm-s-default content-styling"><span class="cm-qualifier">.slide-cross-blink</span> {
+  $<span class="cm-property">size</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">500px</span>;
+  <span class="cm-property">height</span>: $<span class="cm-variable">size</span> * <span class="cm-number">2</span>;
+  <span class="cm-property cm-error">div</span> {
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">width</span>: $<span class="cm-variable">size</span>;
+    <span class="cm-property">height</span>: $<span class="cm-variable">size</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-keyword">black</span>;
+  }
+}
+</pre>
+      <pre class="source cm-s-default content-markup"><code><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">'slide-cross-blink'</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">'a'</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">'b'</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+</code></pre>
+    </div>
+    <a href="/editor#eyJtYXJrdXAiOiI8ZGl2IGNsYXNzPSdzbGlkZS1jcm9zcy1ibGluayc+XG4gIDxkaXYgY2xhc3M9J2EnPjwvZGl2PlxuICA8ZGl2IGNsYXNzPSdiJz48L2Rpdj5cbjwvZGl2PlxuIiwic3R5bGluZyI6Ii5zbGlkZS1jcm9zcy1ibGluayB7XG4gICRzaXplOiAyMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXgtd2lkdGg6IDUwMHB4O1xuICBoZWlnaHQ6ICRzaXplICogMjtcbiAgZGl2IHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgd2lkdGg6ICRzaXplO1xuICAgIGhlaWdodDogJHNpemU7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG4gIH1cbn1cbiIsImFuaW1hdGlvbiI6IkBpbXBvcnQgXCJrZi5zY3NzXCI7XG5cbi5zbGlkZS1jcm9zcy1ibGluayB7XG4gICRzbGlkZS10by1jZW50ZXI6IChcbiAgICAnLmEnOiAobWFyZ2luLWxlZnQ6ICgwbXM6IDAlLCAgIDEyNTBtczogNTAlKSksXG4gICAgJy5iJzogKG1hcmdpbi1sZWZ0OiAoMG1zOiAxMDAlLCAxMjUwbXM6IDUwJSkpLFxuICApO1xuICAkYmxpbmstZGl2OiAoXG4gICAgJy5iJzogKFxuICAgICAgYmFja2dyb3VuZDogKDBtczogd2hpdGUsIDEwMG1zOiBibGFjaywgMjAwbXM6IHdoaXRlKVxuICAgIClcbiAgKTtcblxuICBAaW5jbHVkZSBrZi1jaGFpbihcbiAgICAkc2xpZGUtdG8tY2VudGVyLFxuICAgIGtmLWxvb3AoNCwgJGJsaW5rLWRpdiksXG4gICAga2YtcmV2ZXJzZSgkc2xpZGUtdG8tY2VudGVyKVxuICApO1xufVxuIn0=" target="_blank" class="button-edit">↥ <span class="text">Edit</span></a>
+    
+  </div>
+</div>
+<p></p>
+
+  
+
+
+  <!--
+  <footer class='footer'>
+  <a href="#">Github</a>
+  <a href="#">Editor</a>
+</footer>
+
+  -->
+</main>
+
+    </div>
+  
+
+</body></html>

@@ -1,0 +1,20 @@
+.easing-boxes {
+  $size: 7px;
+  width: 100%;
+  height: $size * 8;
+  position: relative;
+
+  div {
+    background: black;
+    position: absolute;
+    width: $size;
+    height: $size;
+
+    @for $i from 1 through 5 {
+      &:nth-of-type(#{$i}) {
+        margin-top: ($i * ($size + 2px));
+      }
+    }
+
+  }
+}

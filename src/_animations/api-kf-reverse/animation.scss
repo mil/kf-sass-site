@@ -1,0 +1,10 @@
+.kf-reverse-example {
+  $normal-direction-animation: (
+    'div': (
+      background: (0ms: red, 500ms: white, 1000ms: blue),
+      margin-left: (0ms: 0%, 1000ms: 25%, 1500ms: 100%)
+    )
+  );
+  
+  @include kf-reverse($normal-direction-animation);
+}

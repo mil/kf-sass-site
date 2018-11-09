@@ -1,0 +1,8 @@
+.multiple-selectors {
+  $animation-map: (
+    '.a': (margin-left: (0ms: 0%, 3000ms: 100%)),
+    '.b': (margin-left: (0ms: 100%, 2000ms: 0%))
+  );
+
+  @include kf($animation-map);
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <%= render_partial("head") %>
+    <% if (title) { %>
+      <title><%= title %> - Kf Sass Keyframe Animation Library</title>
+    <% } else { %>
+      <title>Kf - Sass Keyframe Animation Library</title>
+    <% } %>
+  </head>
+  <body>
+    <div class='linkbar'>
+      <a href="https://github.com/mil/kf-sass">Github</a>
+      <a href="https://www.npmjs.com/package/kf-sass">NPM</a>
+    </div>
+    <div class='wrap'>
+      <%= render_partial("sidebar", {this_url}) %>
+      <%= render_partial("mainbar", {md_pipe, subsection, section, prev, next, pretext, yield_content, classes}) %>
+    </div>
+  </body>
+</html>

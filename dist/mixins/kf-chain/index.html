@@ -1,0 +1,214 @@
+<html><head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/all.css">
+<script src="/app.js"></script>
+<script src="/sass.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    
+      <title>kf-chain - Kf Sass Keyframe Animation Library</title>
+    
+  </head>
+  <body>
+    <div class="linkbar">
+      <a href="https://github.com/mil/kf-sass" target="_blank">Github</a>
+      <a href="https://www.npmjs.com/package/kf-sass" target="_blank">NPM</a>
+    </div>
+    <div class="wrap">
+      <sidebar class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-header-inner">
+      <div class="sidebar-header-overlay"></div>
+      <div class="sidebar-header-name"><a href="/"><span>K</span><span>f</span></a></div>
+      <div class="sidebar-header-subtext">Sass Keyframe Library</div>
+      <!--
+      <img class='sidebar-icon' src='/assets/github.svg'>
+      -->
+    </div>
+  </div>
+  <div class="sidebar-entries">
+    
+      <a class="l2 group-0 " href="/guide">
+        Guide
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-0 " href="/guide/install">Install</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/animation-maps">Animation Maps</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/using-mixins">Using Mixins</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/easing-animations">Easing Animations</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/pipeline-functions">Pipeline Functions</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/example-animations">Example Animations</a>
+        
+      
+    
+      <a class="l2 group-1 active" href="/mixins">
+        Mixins
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf">kf</a>
+        
+          <a target="" class="l3 group-1 active" href="/mixins/kf-chain">kf-chain</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-ease">kf-ease</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lag">kf-lag</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lead">kf-lead</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-loop">kf-loop</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-mirror">kf-mirror</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-parallel">kf-parallel</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-reverse">kf-reverse</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-sleep">kf-sleep</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stagger">kf-stagger</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stretch">kf-stretch</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-debug">kf-debug</a>
+        
+      
+    
+  </div>
+</sidebar>
+
+      <main class="mainbar mixins kf-chain">
+  
+  <div class="mainbar-header">
+    <div class="mainbar-header-inner">
+      
+        <h2><a href="/mixins">Mixins</a></h2>
+        <h1><strong>kf-chain</strong> ($animation-map, ...)</h1>
+      
+    </div>
+  </div>
+  
+
+  
+
+  <p>Chains two or more animations to run sequentially. Once the first completes, the second starts, and so on and so forth. Any number of <a href="/guide/animation-maps">animation maps</a> may be passed as arguments.</p>
+<p>To place intermediate pauses between animations, use <a href="/mixins/kf-sleep">kf-sleep</a>.</p>
+<p></p><div class="animation-feature example">
+  
+  <div class="animation-feature-display">
+    <div class="kf-chain-example">
+  <div class="a"></div>
+  <div class="b"></div>
+</div>
+
+  </div>
+  <div class="tab-widget" data-active-tab="1">
+    <div class="tab-controls">
+      <button>Animation</button>
+      <button>Styling</button>
+      <button>Markup</button>
+    </div>
+
+    <div class="tab-contents">
+      <pre class="active cm-s-default source content-animation"><span class="cm-qualifier">.kf-chain-example</span> {
+  $<span class="cm-property cm-error">a-slide-animation</span>: (
+    <span class="cm-string">'.a'</span>: (<span class="cm-variable">margin-left</span>: (<span class="cm-number">0ms</span>: <span class="cm-number">0%</span>, <span class="cm-number">500ms</span>: <span class="cm-number">50%</span>))
+  );
+  $<span class="cm-property cm-error">b-slide-animation</span>: (
+    <span class="cm-string">'.b'</span>: (<span class="cm-variable">margin-left</span>: (<span class="cm-number">0ms</span>: <span class="cm-atom">calc</span>(<span class="cm-number">50%</span> + <span class="cm-number">20px</span>), <span class="cm-number">1s</span>: <span class="cm-number">100%</span>))
+  );
+  $<span class="cm-property cm-error">b-blink-animation</span>: (
+    <span class="cm-string">'.b'</span>: (<span class="cm-atom">background</span>: (<span class="cm-number">0ms</span>: <span class="cm-keyword">white</span>, <span class="cm-number">0.1s</span>: <span class="cm-keyword">blue</span>, <span class="cm-number">0.2s</span>: <span class="cm-keyword">white</span>))
+  );
+
+  <span class="cm-def">@include</span> <span class="cm-tag">kf-chain</span>(
+    $<span class="cm-tag">a-slide-animation</span>,
+    $<span class="cm-tag">b-slide-animation</span>,
+    $<span class="cm-tag">b-blink-animation</span>,
+    $<span class="cm-tag">b-blink-animation</span>,
+    $<span class="cm-tag">b-blink-animation</span>
+  );
+}
+</pre>
+      <pre class="source cm-s-default content-styling"><span class="cm-qualifier">.kf-chain-example</span> {
+  <span class="cm-property">max-width</span>: <span class="cm-number">600px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">50px</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-error">.a</span>, <span class="cm-error">.b</span> {
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">20px</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">20px</span>;
+    <span class="cm-property">background</span>: <span class="cm-keyword">white</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-keyword">black</span>;
+  }
+}
+</pre>
+      <pre class="source cm-s-default content-markup"><code><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">'kf-chain-example'</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">'a'</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">'b'</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+</code></pre>
+    </div>
+    <a href="/editor#eyJtYXJrdXAiOiI8ZGl2IGNsYXNzPSdrZi1jaGFpbi1leGFtcGxlJz5cbiAgPGRpdiBjbGFzcz0nYSc+PC9kaXY+XG4gIDxkaXYgY2xhc3M9J2InPjwvZGl2PlxuPC9kaXY+XG4iLCJzdHlsaW5nIjoiLmtmLWNoYWluLWV4YW1wbGUge1xuICBtYXgtd2lkdGg6IDYwMHB4O1xuICBoZWlnaHQ6IDUwcHg7XG4gIHdpZHRoOiAxMDAlO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIC5hLCAuYiB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGhlaWdodDogMjBweDtcbiAgICB3aWR0aDogMjBweDtcbiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcbiAgfVxufVxuIiwiYW5pbWF0aW9uIjoiQGltcG9ydCBcImtmLnNjc3NcIjtcblxuLmtmLWNoYWluLWV4YW1wbGUge1xuICAkYS1zbGlkZS1hbmltYXRpb246IChcbiAgICAnLmEnOiAobWFyZ2luLWxlZnQ6ICgwbXM6IDAlLCA1MDBtczogNTAlKSlcbiAgKTtcbiAgJGItc2xpZGUtYW5pbWF0aW9uOiAoXG4gICAgJy5iJzogKG1hcmdpbi1sZWZ0OiAoMG1zOiBjYWxjKDUwJSArIDIwcHgpLCAxczogMTAwJSkpXG4gICk7XG4gICRiLWJsaW5rLWFuaW1hdGlvbjogKFxuICAgICcuYic6IChiYWNrZ3JvdW5kOiAoMG1zOiB3aGl0ZSwgMC4xczogYmx1ZSwgMC4yczogd2hpdGUpKVxuICApO1xuXG4gIEBpbmNsdWRlIGtmLWNoYWluKFxuICAgICRhLXNsaWRlLWFuaW1hdGlvbixcbiAgICAkYi1zbGlkZS1hbmltYXRpb24sXG4gICAgJGItYmxpbmstYW5pbWF0aW9uLFxuICAgICRiLWJsaW5rLWFuaW1hdGlvbixcbiAgICAkYi1ibGluay1hbmltYXRpb25cbiAgKTtcbn1cbiJ9" target="_blank" class="button-edit">↥ <span class="text">Edit</span></a>
+    
+  </div>
+</div>
+<p></p>
+
+  
+  <div class="prev-next-bar">
+    
+      <a class="prev-next-bar-prev" href="/mixins/kf">
+        <div class="prev-next-bar-symbol">←</div>
+        <div class="prev-next-bar-page">kf</div>
+        <!--
+        <div class='prev-next-bar-desc'></div>
+        -->
+      </a>
+    
+
+    
+      <a class="prev-next-bar-next" href="/mixins/kf-ease">
+        <div class="prev-next-bar-page">kf-ease</div>
+        <div class="prev-next-bar-symbol">→</div>
+        <!--
+        <div class='prev-next-bar-desc'></div>
+        -->
+      </a>
+    
+  </div>
+
+
+
+  <!--
+  <footer class='footer'>
+  <a href="#">Github</a>
+  <a href="#">Editor</a>
+</footer>
+
+  -->
+</main>
+
+    </div>
+  
+
+</body></html>

@@ -1,0 +1,26 @@
+<div class='animation-feature example'>
+  <% if (display_name) { %>
+    <h2><%= animation.name %></h2>
+  <% } %>
+  <div class='animation-feature-display'>
+    <%= animation.markup %>
+  </div>
+  <div class='tab-widget' data-active-tab='1'>
+    <div class='tab-controls'>
+      <button>Animation</button>
+      <button>Styling</button>
+      <button>Markup</button>
+    </div>
+
+    <div class='tab-contents'>
+      <pre class='active cm-s-default source content-animation'><%= animation.highlight_animation %></pre>
+      <pre class='source cm-s-default content-styling'><%= animation.highlight_styling %></pre>
+      <pre class='source cm-s-default content-markup'><code><%= animation.highlight_markup %></code></pre>
+    </div>
+    <a href="<%= animation.url %>" target="_blank" class='button-edit'>&#x21A5; <span class='text'>Edit</span></a>
+    <% if (show_reset) { %>
+      <div class='button-seperator'></div>
+      <div class='button-reset'>&#x21BA; <span class='text'>Reset</span></div>
+    <% } %>
+  </div>
+</div>

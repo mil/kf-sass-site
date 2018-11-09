@@ -1,0 +1,13 @@
+.kf-stretch-example {
+  $a-animation: ('.a': (margin-left: (0ms: 0, 1000ms: 100%)));
+  $b-animation: ('.b': (margin-left: (0ms: 0, 1000ms: 100%)));
+  $c-animation: ('.c': (margin-left: (0ms: 0, 1000ms: 100%)));
+  $d-animation: ('.d': (margin-left: (0ms: 0, 1000ms: 100%)));
+
+  @include kf-parallel(
+    kf-stretch(1.5s, $a-animation),
+    kf-stretch(2500ms, $b-animation),
+    kf-stretch(3, $c-animation),
+    kf-stretch(5s, $d-animation),
+  );
+}

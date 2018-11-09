@@ -1,0 +1,46 @@
+.prev-next-bar {
+  //border-bottom: 1px dotted #888888;
+  $from-center: 15px;
+  $arrow-pad: 3px;
+  clear: both;
+  overflow: hidden;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 40px;
+
+  a {
+    text-decoration: none;
+  }
+
+  &-prev, &-next { 
+    @include fz(xs);
+  }
+  //&-prev { border-right: 1px dotted #888888; }
+  //&-next { border-left: 1px dotted #888888; }
+  &-prev + &-next { 
+    border-left: 1px dotted #888888;
+    padding-left: $from-center;
+    margin-left: $from-center;
+  }
+  &-prev { text-align: right; }
+  &-next { text-align: left; }
+  &-next &-symbol { padding-left: $arrow-pad; }
+  &-prev &-symbol { padding-right: $arrow-pad; }
+
+  &-symbol, &-page {
+    display: inline-block;
+  }
+
+  &-symbol {
+  }
+  &-page {
+    margin-bottom: -4px;
+  }
+  &-desc {
+    @include fz(sm);
+    color: black;
+  }
+
+
+}

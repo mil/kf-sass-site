@@ -1,0 +1,17 @@
+.per-transition-easing {
+  height: 20px;
+  width: 100%;
+  position: relative;
+
+  $size: 20px;
+
+  div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #888888;
+    width: $size;
+    height: $size;
+    border: 1px solid #e8e8e8;
+  }
+}

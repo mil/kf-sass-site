@@ -1,0 +1,14 @@
+.using-mixins-nested {
+  $animation-map: ('div': (margin-left: (
+    0ms: 0%, 
+    2000ms: 100%
+  )));
+  
+  @include kf-chain(
+    $animation-map,
+    kf-stretch(
+      1000ms,
+      kf-reverse($animation-map)
+    )
+  );
+}

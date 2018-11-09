@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+  th {
+    border-top: 1px solid #e8e8e8;
+    background: #f2f2f2;
+    font-weight: bold;
+  }
+
+  thead th {
+    padding: 5px 20px;
+  }
+
+  td, th {
+    text-align: left;
+    border-left: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px 20px;
+
+    &:first-child { width: 25% }
+    &:last-child { border-right: 1px solid #e8e8e8; }
+  }
+}

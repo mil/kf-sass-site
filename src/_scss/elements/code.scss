@@ -1,0 +1,13 @@
+code {
+  display: inline-block;
+
+  *:not(pre) > & {
+    background: #f4f4f4;
+    padding: 0px 3px;
+    //border: 1px solid #dadada;
+    font-family: Monospace;
+    border-radius: 2px;
+    //font-weight: bold;
+    @include fz(xs);
+  }
+}

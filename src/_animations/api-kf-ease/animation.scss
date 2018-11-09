@@ -1,0 +1,7 @@
+.kf-ease-example {
+  $animation-map: (
+    'div': (margin-left: (0ms: 0, 1000ms: 100%, 2000ms: 0%))
+  );
+
+  @include kf-ease(ease-in-out, $animation-map);
+}

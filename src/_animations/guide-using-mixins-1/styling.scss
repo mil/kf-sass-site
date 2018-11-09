@@ -1,0 +1,12 @@
+.using-mixins-nested {
+  height: 20px;
+  position: relative;
+
+  div {
+    $s: 20px;
+    position: absolute;
+    width: $s;
+    height: $s;
+    border: 1px solid #000000;
+  }
+}

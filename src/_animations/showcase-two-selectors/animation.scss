@@ -1,0 +1,8 @@
+.two-selectors {
+  $andy-map: (
+    'div:nth-child(1)': ( margin-left: ( 0ms: 0%, 3000ms: 100%) ),
+    'div:nth-child(2)': ( margin-left: ( 0ms: 100%, 2000ms: 0%) )
+  );
+
+  @include kf($andy-map);
+}

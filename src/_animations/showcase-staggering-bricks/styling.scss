@@ -1,0 +1,32 @@
+.staggering-bricks {
+  position: relative;
+  height: 40px;
+  margin: 30px 0;
+
+  div {
+    // common properties
+    width: 20px;
+    height: 20px;
+    content: " ";
+    position: absolute;
+    opacity: 0;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    margin-top: 0;
+
+    &:nth-child(odd) {
+      top: 20px;
+    }
+  }
+}
+
+$base-color: #D6FFAD;
+$n-bricks: 18;
+
+// prep map
+@for $i from 1 through $n-bricks {
+  .staggering-bricks div:nth-child(#{$i}n) {
+    background: darken($base-color, $i * 5);
+    left: -40px + 20px * $i;
+  }
+}

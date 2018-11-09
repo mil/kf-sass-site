@@ -1,0 +1,150 @@
+<html><head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/all.css">
+<script src="/app.js"></script>
+<script src="/sass.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    
+      <title>Install - Kf Sass Keyframe Animation Library</title>
+    
+  </head>
+  <body>
+    <div class="linkbar">
+      <a href="https://github.com/mil/kf-sass" target="_blank">Github</a>
+      <a href="https://www.npmjs.com/package/kf-sass" target="_blank">NPM</a>
+    </div>
+    <div class="wrap">
+      <sidebar class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-header-inner">
+      <div class="sidebar-header-overlay"></div>
+      <div class="sidebar-header-name"><a href="/"><span>K</span><span>f</span></a></div>
+      <div class="sidebar-header-subtext">Sass Keyframe Library</div>
+      <!--
+      <img class='sidebar-icon' src='/assets/github.svg'>
+      -->
+    </div>
+  </div>
+  <div class="sidebar-entries">
+    
+      <a class="l2 group-0 active" href="/guide">
+        Guide
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-0 active" href="/guide/install">Install</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/animation-maps">Animation Maps</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/using-mixins">Using Mixins</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/easing-animations">Easing Animations</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/pipeline-functions">Pipeline Functions</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/example-animations">Example Animations</a>
+        
+      
+    
+      <a class="l2 group-1 " href="/mixins">
+        Mixins
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf">kf</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-chain">kf-chain</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-ease">kf-ease</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lag">kf-lag</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lead">kf-lead</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-loop">kf-loop</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-mirror">kf-mirror</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-parallel">kf-parallel</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-reverse">kf-reverse</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-sleep">kf-sleep</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stagger">kf-stagger</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stretch">kf-stretch</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-debug">kf-debug</a>
+        
+      
+    
+  </div>
+</sidebar>
+
+      <main class="mainbar guide install">
+  
+  <div class="mainbar-header">
+    <div class="mainbar-header-inner">
+      
+        <h2><a href="/guide">Guide</a></h2>
+        <h1><strong>Install</strong></h1>
+      
+    </div>
+  </div>
+  
+
+  
+
+  <p>You can either download the <a href="https://raw.githubusercontent.com/mil/kf-sass/master/dist/kf-1.0.0.scss" target="_blank">single file import</a> via the latest Github relase or alternativly fetch Kf through its <a href="http://npmjs.com/package/kf-sass" target="_blank">NPM package</a>:</p>
+<pre><code class="language-bash"><div class="cm-s-default">npm install --save kf-scss
+</div></code></pre>
+<p>Next simply import <code>kf.scss</code> as an import in your main SCSS/Sass file:</p>
+<pre><code class="language-scss"><div class="cm-s-default"><span class="cm-def">@import</span> <span class="cm-string">'relative/path-to/kf.scss'</span>;
+</div></code></pre>
+<h4 id="alternative_live_playground">Alternative: Live playground</h4>
+<p>If you just want to play around before installing - you can use the <a href="http://kf-sass.com/editor/#eyJtYXJrdXAiOiI8ZGl2IGNsYXNzPSdzbGlkZS1jcm9zcy1ibGluayc+XG4gIDxkaXYgY2xhc3M9J2EnPjwvZGl2PlxuICA8ZGl2IGNsYXNzPSdiJz48L2Rpdj5cbjwvZGl2PlxuIiwic3R5bGluZyI6Ii5zbGlkZS1jcm9zcy1ibGluayB7XG4gICRzaXplOiAyMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXgtd2lkdGg6IDUwMHB4O1xuICBoZWlnaHQ6ICRzaXplICogMjtcbiAgZGl2IHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgd2lkdGg6ICRzaXplO1xuICAgIGhlaWdodDogJHNpemU7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG4gIH1cbn1cbiIsImFuaW1hdGlvbiI6IkBpbXBvcnQgXCJrZi5zY3NzXCI7XG5cbi5zbGlkZS1jcm9zcy1ibGluayB7XG4gICRzbGlkZS10by1jZW50ZXI6IChcbiAgICAnLmEnOiAobWFyZ2luLWxlZnQ6ICgwbXM6IDAlLCAgIDEyNTBtczogNTAlKSksXG4gICAgJy5iJzogKG1hcmdpbi1sZWZ0OiAoMG1zOiAxMDAlLCAxMjUwbXM6IDUwJSkpLFxuICApO1xuICAkYmxpbmstZGl2OiAoXG4gICAgJy5iJzogKFxuICAgICAgYmFja2dyb3VuZDogKDBtczogd2hpdGUsIDEwMG1zOiBibGFjaywgMjAwbXM6IHdoaXRlKVxuICAgIClcbiAgKTtcbiAgQGluY2x1ZGUga2YtY2hhaW4oXG4gICAgJHNsaWRlLXRvLWNlbnRlcixcbiAgICBrZi1sb29wKDQsICRibGluay1kaXYpLFxuICAgIGtmLXJldmVyc2UoJHNsaWRlLXRvLWNlbnRlcilcbiAgKTtcbn1cbiJ9" target="_blank">live playground</a> instead which preloads Kf in a live <a href="https://github.com/medialize/sass.js/" target="_blank">Sass.js</a> environment.</p>
+
+  
+  <div class="prev-next-bar">
+    
+
+    
+      <a class="prev-next-bar-next" href="/guide/animation-maps">
+        <div class="prev-next-bar-page">Animation Maps</div>
+        <div class="prev-next-bar-symbol">→</div>
+        <!--
+        <div class='prev-next-bar-desc'></div>
+        -->
+      </a>
+    
+  </div>
+
+
+
+  <!--
+  <footer class='footer'>
+  <a href="#">Github</a>
+  <a href="#">Editor</a>
+</footer>
+
+  -->
+</main>
+
+    </div>
+  
+
+</body></html>

@@ -1,0 +1,21 @@
+html {
+  background: #e8e8e8;
+  background: white;
+  font-family: SourceSansPro;
+  font-size: 16px;
+  height: 100%;
+  //border-top: 2px solid #888888;
+
+  //background-image: linear-gradient(
+  //  90deg, $ac 0%, 
+  //  red $split-at, 
+  //  red $split-at, 
+  //  blue $split-at
+  //);
+
+  &, * { box-sizing: border-box; }
+  body { line-height: 1.5; overflow-y: scroll; }
+  b, strong { font-weight: bold; }
+  i, em { font-style: italic; }
+}
+

@@ -1,0 +1,27 @@
+.combining-mixins-example {
+  $joiner: (
+    0ms: (
+      'div.a': (left: -10px, top: -10px),
+      'div.b': (left: 10px, top: -10px),
+      'div.c': (left: -10px, top: 10px),
+      'div.d': (left: 10px, top: 10px)
+    ),
+    1000ms: ('div': (left: 0, top: 0))
+  );
+  $darken: (
+    0ms: ('div': (background: transparent)),
+    800ms: ('div': (background: #e8e8e8)),
+    1600ms: ('div': (background: black))
+  );
+  $slide: ('div': (margin-left: (0ms: 0px, 1s: 100%)));
+
+  @include kf-chain(
+    $joiner, $darken, $slide,
+    kf-reverse($joiner),
+    kf-stretch(2, $joiner),
+    kf-ease(ease-in-out, kf-reverse($slide)),
+    kf-stretch(0.2s, kf-loop(10, kf-mirror(kf-reverse($darken)))),
+    kf-reverse($joiner),
+    kf-reverse($darken)
+  );
+}

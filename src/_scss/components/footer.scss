@@ -1,0 +1,21 @@
+footer {
+  clear: both;
+  width: 100%;
+  padding-top: sp(1);
+  border-top: 1px dotted #888888;
+  text-align: right;
+  margin-top: 40px;
+
+  a {
+    $between: 10px;
+    text-decoration: none;
+    color: cl(blue);
+    @include fz(sm);
+
+    &:not(:first-child) {
+      border-left: 1px dotted #888888;
+      margin-left: $between;
+      padding-left: $between;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<% if (next || prev) { %>
+  <div class='prev-next-bar'>
+    <% if (prev) {  %>
+      <a class='prev-next-bar-prev' href="<%= prev.link %>">
+        <div class='prev-next-bar-symbol'>&larr;</div>
+        <div class='prev-next-bar-page'><%= prev.name %></div>
+        <!--
+        <div class='prev-next-bar-desc'><%= prev.desc %></div>
+        -->
+      </a>
+    <% }  %>
+
+    <% if (next) {  %>
+      <a class='prev-next-bar-next' href="<%= next.link %>">
+        <div class='prev-next-bar-page'><%= next.name %></div>
+        <div class='prev-next-bar-symbol'>&rarr;</div>
+        <!--
+        <div class='prev-next-bar-desc'><%= next.desc %></div>
+        -->
+      </a>
+    <% }  %>
+  </div>
+<% } %>

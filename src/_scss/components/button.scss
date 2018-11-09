@@ -1,0 +1,12 @@
+.button {
+	border: 1px solid #e8e8e8;
+	padding: 5px;
+	margin: 10px;
+
+	&-wrap {
+		//display: flex;
+		margin: 20px;
+		align-items: space-between;
+		text-align: center;
+	}
+}

@@ -1,0 +1,5 @@
+.kf-mirror-example {
+  $animation-map: ('div': ( margin-left: (0ms: 0, 1000ms: 100%)));
+
+  @include kf-mirror($animation-map);
+}

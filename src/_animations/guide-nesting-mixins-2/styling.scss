@@ -1,0 +1,16 @@
+.combining-mixins-example-2 {
+  height: 40px;
+  width: 100%;
+  position: relative;
+
+  div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+
+    .b {
+      margin-top: 12px;
+    }
+  }
+}

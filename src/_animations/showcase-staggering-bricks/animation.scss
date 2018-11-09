@@ -1,0 +1,23 @@
+.staggering-bricks {
+  $entry: (); 
+  $lineup: ();
+  @for $i from 1 through 18 {
+    $entry: append($entry, ('div:nth-child(#{$i})': (
+      0ms: (opacity: 0, margin-left: 0),
+      200ms: (opacity: 1),
+      500ms: (margin-left: 20px)
+    )));
+    $lineup: append($lineup, ('div:nth-child(#{$i})': (
+      0ms: (margin-top: 0),
+      400ms: (margin-top: if($i % 2 == 0, 0px, -20px))
+    )));
+  }; 
+
+  @include kf-mirror(
+    kf-chain(
+      kf-stagger(-300ms, $entry...),
+      kf-parallel($lineup...),
+      ('div': (height: (0ms: 20px, 400ms: 60px)))
+    )
+  );
+}

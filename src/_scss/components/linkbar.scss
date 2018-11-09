@@ -1,0 +1,25 @@
+.linkbar {
+  //max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: right;
+  padding: 30px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+
+  @include fz(sm);
+
+  a {
+    padding-left: 10px;
+    text-decoration: none;
+    color: #3c3c3c;
+    &:hover {
+      color: cl(blue);
+    }
+  }
+
+  a + a {
+    border-left: 1px dotted #3c3c3c;
+    margin-left: 10px;
+  }
+}

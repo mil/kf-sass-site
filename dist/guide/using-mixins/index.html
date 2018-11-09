@@ -1,0 +1,259 @@
+<html><head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/all.css">
+<script src="/app.js"></script>
+<script src="/sass.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    
+      <title>Using Mixins - Kf Sass Keyframe Animation Library</title>
+    
+  </head>
+  <body>
+    <div class="linkbar">
+      <a href="https://github.com/mil/kf-sass" target="_blank">Github</a>
+      <a href="https://www.npmjs.com/package/kf-sass" target="_blank">NPM</a>
+    </div>
+    <div class="wrap">
+      <sidebar class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-header-inner">
+      <div class="sidebar-header-overlay"></div>
+      <div class="sidebar-header-name"><a href="/"><span>K</span><span>f</span></a></div>
+      <div class="sidebar-header-subtext">Sass Keyframe Library</div>
+      <!--
+      <img class='sidebar-icon' src='/assets/github.svg'>
+      -->
+    </div>
+  </div>
+  <div class="sidebar-entries">
+    
+      <a class="l2 group-0 active" href="/guide">
+        Guide
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-0 " href="/guide/install">Install</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/animation-maps">Animation Maps</a>
+        
+          <a target="" class="l3 group-0 active" href="/guide/using-mixins">Using Mixins</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/easing-animations">Easing Animations</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/pipeline-functions">Pipeline Functions</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/example-animations">Example Animations</a>
+        
+      
+    
+      <a class="l2 group-1 " href="/mixins">
+        Mixins
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf">kf</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-chain">kf-chain</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-ease">kf-ease</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lag">kf-lag</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lead">kf-lead</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-loop">kf-loop</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-mirror">kf-mirror</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-parallel">kf-parallel</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-reverse">kf-reverse</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-sleep">kf-sleep</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stagger">kf-stagger</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stretch">kf-stretch</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-debug">kf-debug</a>
+        
+      
+    
+  </div>
+</sidebar>
+
+      <main class="mainbar guide using-mixins">
+  
+  <div class="mainbar-header">
+    <div class="mainbar-header-inner">
+      
+        <h2><a href="/guide">Guide</a></h2>
+        <h1><strong>Using Mixins</strong></h1>
+      
+    </div>
+  </div>
+  
+
+  
+
+  <p>Kf's <a href="/mixins">selection of mixins</a> can be used in two ways. The first way is as a <a href="#using_a_mixin_normally">top-level include</a> statement.  And the second way is <a href="#using_mixin_composability">as the input for another mixin</a>'s animation map.</p>
+<h4 id="using_a_mixin_normally">Using a mixin normally:</h4>
+<p>The first way you can use a Kf mixins with a traditional <code>@include</code> statement. Read the documentation for each <a href="/mixins">mixin</a> to find out the parameters for each.</p>
+<p>Say for example, if you want to play an animation map in reverse you could use the <a href="/mixins/kf-reverse">kf-reverse</a> mixin as:</p>
+<p></p><div class="animation-feature example">
+  
+  <div class="animation-feature-display">
+    <div class="using-mixins-at-the-top-level">
+  <div></div>
+</div>
+
+  </div>
+  <div class="tab-widget" data-active-tab="1">
+    <div class="tab-controls">
+      <button>Animation</button>
+      <button>Styling</button>
+      <button>Markup</button>
+    </div>
+
+    <div class="tab-contents">
+      <pre class="active cm-s-default source content-animation"><span class="cm-qualifier">.using-mixins-at-the-top-level</span> {
+  $<span class="cm-property cm-error">animation-map</span>: (<span class="cm-string">'div'</span>: (<span class="cm-variable">margin-left</span>: (
+    <span class="cm-number">0ms</span>: <span class="cm-number">0%</span>, 
+    <span class="cm-number">2s</span>: <span class="cm-number">100%</span>
+  )));
+
+  <span class="cm-def">@include</span> <span class="cm-tag">kf-reverse</span>($<span class="cm-tag">animation-map</span>);
+}
+</pre>
+      <pre class="source cm-s-default content-styling"><span class="cm-qualifier">.using-mixins-at-the-top-level</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+
+  <span class="cm-property cm-error">div</span> {
+    $<span class="cm-property cm-error">s</span>: <span class="cm-number">20px</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">width</span>: $<span class="cm-variable">s</span>;
+    <span class="cm-property">height</span>: $<span class="cm-variable">s</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#000000</span>;
+  }
+}
+</pre>
+      <pre class="source cm-s-default content-markup"><code><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">'using-mixins-at-the-top-level'</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+</code></pre>
+    </div>
+    <a href="/editor#eyJtYXJrdXAiOiI8ZGl2IGNsYXNzPSd1c2luZy1taXhpbnMtYXQtdGhlLXRvcC1sZXZlbCc+XG4gIDxkaXY+PC9kaXY+XG48L2Rpdj5cbiIsInN0eWxpbmciOiIudXNpbmctbWl4aW5zLWF0LXRoZS10b3AtbGV2ZWwge1xuICBoZWlnaHQ6IDIwcHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcblxuICBkaXYge1xuICAgICRzOiAyMHB4O1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB3aWR0aDogJHM7XG4gICAgaGVpZ2h0OiAkcztcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMDAwMDAwO1xuICB9XG59XG4iLCJhbmltYXRpb24iOiJAaW1wb3J0IFwia2Yuc2Nzc1wiO1xuXG4udXNpbmctbWl4aW5zLWF0LXRoZS10b3AtbGV2ZWwge1xuICAkYW5pbWF0aW9uLW1hcDogKCdkaXYnOiAobWFyZ2luLWxlZnQ6IChcbiAgICAwbXM6IDAlLCBcbiAgICAyczogMTAwJVxuICApKSk7XG5cbiAgQGluY2x1ZGUga2YtcmV2ZXJzZSgkYW5pbWF0aW9uLW1hcCk7XG59XG4ifQ==" target="_blank" class="button-edit">↥ <span class="text">Edit</span></a>
+    
+  </div>
+</div>
+<p></p>
+<h4 id="using_mixin_composability">Using mixin composability (e.g. mixins as functions):</h4>
+<p>The second way you can use a Kf mixin is as a <em>function</em>. When a Kf mixin is used as a function, its result is a <a href="/guide/animation-maps">animation map</a> which is compatible as the input animation map for any other Kf mixin.</p>
+<p>For example say you wanted to play the animation in the previous example first normally, and then in reverse at half speed, you could write simply:</p>
+<p></p><div class="animation-feature example">
+  
+  <div class="animation-feature-display">
+    <div class="using-mixins-nested">
+  <div></div>
+</div>
+
+  </div>
+  <div class="tab-widget" data-active-tab="1">
+    <div class="tab-controls">
+      <button>Animation</button>
+      <button>Styling</button>
+      <button>Markup</button>
+    </div>
+
+    <div class="tab-contents">
+      <pre class="active cm-s-default source content-animation"><span class="cm-qualifier">.using-mixins-nested</span> {
+  $<span class="cm-property cm-error">animation-map</span>: (<span class="cm-string">'div'</span>: (<span class="cm-variable">margin-left</span>: (
+    <span class="cm-number">0ms</span>: <span class="cm-number">0%</span>, 
+    <span class="cm-number">2000ms</span>: <span class="cm-number">100%</span>
+  )));
+  
+  <span class="cm-def">@include</span> <span class="cm-tag">kf-chain</span>(
+    $<span class="cm-tag">animation-map</span>,
+    <span class="cm-tag">kf-stretch</span>(
+      <span class="cm-number">1000ms</span>,
+      <span class="cm-tag">kf-reverse</span>($<span class="cm-tag">animation-map</span>)
+    )
+  );
+}
+</pre>
+      <pre class="source cm-s-default content-styling"><span class="cm-qualifier">.using-mixins-nested</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+
+  <span class="cm-property cm-error">div</span> {
+    $<span class="cm-property cm-error">s</span>: <span class="cm-number">20px</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">width</span>: $<span class="cm-variable">s</span>;
+    <span class="cm-property">height</span>: $<span class="cm-variable">s</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#000000</span>;
+  }
+}
+</pre>
+      <pre class="source cm-s-default content-markup"><code><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">'using-mixins-nested'</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+</code></pre>
+    </div>
+    <a href="/editor#eyJtYXJrdXAiOiI8ZGl2IGNsYXNzPSd1c2luZy1taXhpbnMtbmVzdGVkJz5cbiAgPGRpdj48L2Rpdj5cbjwvZGl2PlxuIiwic3R5bGluZyI6Ii51c2luZy1taXhpbnMtbmVzdGVkIHtcbiAgaGVpZ2h0OiAyMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgZGl2IHtcbiAgICAkczogMjBweDtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgd2lkdGg6ICRzO1xuICAgIGhlaWdodDogJHM7XG4gICAgYm9yZGVyOiAxcHggc29saWQgIzAwMDAwMDtcbiAgfVxufVxuIiwiYW5pbWF0aW9uIjoiQGltcG9ydCBcImtmLnNjc3NcIjtcblxuLnVzaW5nLW1peGlucy1uZXN0ZWQge1xuICAkYW5pbWF0aW9uLW1hcDogKCdkaXYnOiAobWFyZ2luLWxlZnQ6IChcbiAgICAwbXM6IDAlLCBcbiAgICAyMDAwbXM6IDEwMCVcbiAgKSkpO1xuICBcbiAgQGluY2x1ZGUga2YtY2hhaW4oXG4gICAgJGFuaW1hdGlvbi1tYXAsXG4gICAga2Ytc3RyZXRjaChcbiAgICAgIDEwMDBtcyxcbiAgICAgIGtmLXJldmVyc2UoJGFuaW1hdGlvbi1tYXApXG4gICAgKVxuICApO1xufVxuIn0=" target="_blank" class="button-edit">↥ <span class="text">Edit</span></a>
+    
+  </div>
+</div>
+<p></p>
+
+  
+  <div class="prev-next-bar">
+    
+      <a class="prev-next-bar-prev" href="/guide/animation-maps">
+        <div class="prev-next-bar-symbol">←</div>
+        <div class="prev-next-bar-page">Animation Maps</div>
+        <!--
+        <div class='prev-next-bar-desc'></div>
+        -->
+      </a>
+    
+
+    
+      <a class="prev-next-bar-next" href="/guide/easing-animations">
+        <div class="prev-next-bar-page">Easing Animations</div>
+        <div class="prev-next-bar-symbol">→</div>
+        <!--
+        <div class='prev-next-bar-desc'></div>
+        -->
+      </a>
+    
+  </div>
+
+
+
+  <!--
+  <footer class='footer'>
+  <a href="#">Github</a>
+  <a href="#">Editor</a>
+</footer>
+
+  -->
+</main>
+
+    </div>
+  
+
+</body></html>

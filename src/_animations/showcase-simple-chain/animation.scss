@@ -1,0 +1,19 @@
+.simple-chain {
+  $h: 100px;
+  $d: 500ms;
+  $n: 5;  $c: ();
+  @for $i from 1 through $n {
+    $c: append($c, (
+      'div:nth-child(#{$i})': (
+        height: ( 
+          0ms: 0px, 
+          $d: $h
+        )
+      )
+    ));
+  }
+
+  $chained: kf-chain($c...);
+  $s: kf-chain($chained, kf-reverse($chained));
+  @include kf($s);
+}

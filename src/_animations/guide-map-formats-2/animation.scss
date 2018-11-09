@@ -1,0 +1,7 @@
+.single-selector div {
+  $animation-map: (
+    margin-left: (0ms: 0%, 3000ms: 100%)
+  );
+
+  @include kf($animation-map);
+}

@@ -1,0 +1,13 @@
+.slide-cross-blink {
+  $size: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: $size * 2;
+  div {
+    position: absolute;
+    width: $size;
+    height: $size;
+    border: 1px solid black;
+  }
+}

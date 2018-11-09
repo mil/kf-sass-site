@@ -1,0 +1,30 @@
+<sidebar class='sidebar'>
+  <div class='sidebar-header'>
+    <div class='sidebar-header-inner'>
+      <div class='sidebar-header-overlay'></div>
+      <div class='sidebar-header-name'><a href="/"><span>K</span><span>f</span></a></div>
+      <div class='sidebar-header-subtext'>Sass Keyframe Library</div>
+      <!--
+      <img class='sidebar-icon' src='/assets/github.svg'>
+      -->
+    </div>
+  </div>
+  <div class='sidebar-entries'>
+    <% _.each(globals.nav, function(m, i) { %>
+      <a class="l2 group-<%= i %> <%= nav_class(this_url, m.section.url) %>" href="<%= m.section.url %>">
+        <%= m.section.text %>
+          <!--
+          <% if (m.nest) { %>
+            <div class='caret'><div class='caret-inner'></div></div>
+          <% } %>
+          -->
+      </a>
+      <div class='mobile-flexbreak'></div>
+      <% if(m.nest) { %>
+        <% _.each(m.nest, function(d) { %>
+          <a target="<%= d._target %>"  class="l3 group-<%= i %> <%= nav_class(this_url, d.url) %>" href="<%= d.url %>"><%= d.text %></a>
+        <% }) %>
+      <% } %>
+    <% }) %>
+  </div>
+</sidebar>

@@ -1,0 +1,15 @@
+.kf-parallel-example {
+  $a-animation: ('.a': (
+    margin-left: (0ms: 0px, 2s: 100%),
+    background: (0ms: white, 4s: red)
+  ));
+  $b-animation: ('.b': (
+    margin-left: (0ms: 100%, 2s: 0%),
+    background: (0ms: orange, 5s: blue)
+  ));
+
+  @include kf-parallel(
+    $a-animation,
+    $b-animation
+  );
+}

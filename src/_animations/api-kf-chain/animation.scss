@@ -1,0 +1,19 @@
+.kf-chain-example {
+  $a-slide-animation: (
+    '.a': (margin-left: (0ms: 0%, 500ms: 50%))
+  );
+  $b-slide-animation: (
+    '.b': (margin-left: (0ms: calc(50% + 20px), 1s: 100%))
+  );
+  $b-blink-animation: (
+    '.b': (background: (0ms: white, 0.1s: blue, 0.2s: white))
+  );
+
+  @include kf-chain(
+    $a-slide-animation,
+    $b-slide-animation,
+    $b-blink-animation,
+    $b-blink-animation,
+    $b-blink-animation
+  );
+}

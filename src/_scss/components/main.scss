@@ -1,0 +1,53 @@
+.wrap {
+  overflow: hidden;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  max-width: 900px;
+  width: 100%;
+
+  > * {
+    vertical-align: top;
+  }
+}
+
+.mainbar {
+  $pad_topbot: 50px;
+  max-width: 650px;
+  width: 100%;
+  padding: 30px;
+  padding-top: 0;
+  margin-bottom: $pad_topbot;
+  //background: white;
+
+
+  @include kf((opacity: (0ms: 0, 100ms: 1)), false);
+
+  a { 
+    color: #0026A4;
+    text-decoration: underline;
+    &:hover {
+      //color: #000000;
+      //color: white;
+      //@include kf(
+      //  (
+      //    0ms: (text-decoration: underline),
+      //    100ms: (text-decoration: none),
+      //    200ms: (text-decoration: underline)
+      //  )
+      //);
+    }
+  }
+
+  section {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    border-top: 1px solid black;
+    &:first-of-type {
+      border-top: none;
+    }
+  }
+
+  sup { font-size: 10px; }
+}

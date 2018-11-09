@@ -1,0 +1,27 @@
+<main class="mainbar <%= classes %>">
+  <% if(section) { %>
+  <div class='mainbar-header'>
+    <div class='mainbar-header-inner'>
+      <% if(subsection) { %>
+        <h2><a href="/<%= section.toLowerCase() %>"><%= md_pipe(section) %></a></h2>
+        <h1><%= md_pipe(subsection) %></h1>
+      <% } else { %>
+        <h1><%= md_pipe(section) %></h1>
+      <% } %>
+    </div>
+  </div>
+  <% } %>
+
+  <% if (pretext) { %>
+    <div class='pretext'>
+      <%= md_pipe(pretext) %>
+    </div>
+  <% } %>
+
+  <%= yield_content %>
+  <%= render_partial("prev-next-bar", { prev: prev , next: next }) %>
+
+  <!--
+  <%= render_partial("footer") %>
+  -->
+</main>

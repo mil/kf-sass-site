@@ -1,0 +1,10 @@
+.kf-sleep-example {
+  $animation-a: ('div': ( margin-left: (0ms: 0, 1000ms: 50%)));
+  $animation-b: ('div': ( margin-left: (0ms: 50%, 1000ms: 100%)));
+
+  @include kf-chain(
+    $animation-a,
+    kf-sleep(2s),
+    $animation-b
+  );
+}

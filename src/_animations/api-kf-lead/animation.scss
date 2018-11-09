@@ -1,0 +1,5 @@
+.kf-lead-example {
+  @include kf-lead(2000ms, (
+    'div': (margin-left: (0ms: 0%, 2s: 100%))
+  ));
+}

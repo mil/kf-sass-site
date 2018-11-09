@@ -1,0 +1,17 @@
+.simple-chain {
+  height: 100px;
+  position: relative;
+
+  div {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    border-left: 11px solid #cfcfcf;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        left: 12px * $i;
+      }
+    }
+  }
+}

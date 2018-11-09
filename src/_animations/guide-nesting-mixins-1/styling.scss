@@ -1,0 +1,14 @@
+.combining-mixins-example {
+  height: 40px;
+  width: 100%;
+  position: relative;
+
+  div {
+    $s: 10px;
+    position: absolute;
+    width: $s;
+    height: $s;
+    border: 1px solid black;
+
+  }
+}

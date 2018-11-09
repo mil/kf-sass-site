@@ -1,0 +1,18 @@
+.kf-stagger-example {
+  $a-slide-animation: (
+    '.a': (margin-left: (0ms: 0%, 500ms: 50%))
+  );
+  $b-slide-animation: (
+    '.b': (margin-left: (0ms: calc(50% + 20px), 1s: 100%))
+  );
+  $b-blink-animation: (
+    '.b': (background: (0ms: white, 0.25s: blue, 0.5s: white))
+  );
+
+  @include kf-stagger(
+    -300ms,
+    $a-slide-animation,
+    $b-slide-animation,
+    $b-blink-animation
+  );
+}

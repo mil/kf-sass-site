@@ -1,0 +1,206 @@
+<html><head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/all.css">
+<script src="/app.js"></script>
+<script src="/sass.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    
+      <title>kf-sleep - Kf Sass Keyframe Animation Library</title>
+    
+  </head>
+  <body>
+    <div class="linkbar">
+      <a href="https://github.com/mil/kf-sass" target="_blank">Github</a>
+      <a href="https://www.npmjs.com/package/kf-sass" target="_blank">NPM</a>
+    </div>
+    <div class="wrap">
+      <sidebar class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-header-inner">
+      <div class="sidebar-header-overlay"></div>
+      <div class="sidebar-header-name"><a href="/"><span>K</span><span>f</span></a></div>
+      <div class="sidebar-header-subtext">Sass Keyframe Library</div>
+      <!--
+      <img class='sidebar-icon' src='/assets/github.svg'>
+      -->
+    </div>
+  </div>
+  <div class="sidebar-entries">
+    
+      <a class="l2 group-0 " href="/guide">
+        Guide
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-0 " href="/guide/install">Install</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/animation-maps">Animation Maps</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/using-mixins">Using Mixins</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/easing-animations">Easing Animations</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/pipeline-functions">Pipeline Functions</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/example-animations">Example Animations</a>
+        
+      
+    
+      <a class="l2 group-1 active" href="/mixins">
+        Mixins
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf">kf</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-chain">kf-chain</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-ease">kf-ease</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lag">kf-lag</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lead">kf-lead</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-loop">kf-loop</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-mirror">kf-mirror</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-parallel">kf-parallel</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-reverse">kf-reverse</a>
+        
+          <a target="" class="l3 group-1 active" href="/mixins/kf-sleep">kf-sleep</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stagger">kf-stagger</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stretch">kf-stretch</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-debug">kf-debug</a>
+        
+      
+    
+  </div>
+</sidebar>
+
+      <main class="mainbar mixins kf-sleep">
+  
+  <div class="mainbar-header">
+    <div class="mainbar-header-inner">
+      
+        <h2><a href="/mixins">Mixins</a></h2>
+        <h1><strong>kf-sleep</strong> ($duration)</h1>
+      
+    </div>
+  </div>
+  
+
+  
+
+  <p>Does nothing for the provided duration. Used in the context of a <a href="/mixins/kf-chain">kf-chain</a> list of maps in order to provide a pauses between individual sequential animations.</p>
+<p></p><div class="animation-feature example">
+  
+  <div class="animation-feature-display">
+    <div class="kf-sleep-example">
+  <div></div>
+</div>
+
+  </div>
+  <div class="tab-widget" data-active-tab="1">
+    <div class="tab-controls">
+      <button>Animation</button>
+      <button>Styling</button>
+      <button>Markup</button>
+    </div>
+
+    <div class="tab-contents">
+      <pre class="active cm-s-default source content-animation"><span class="cm-qualifier">.kf-sleep-example</span> {
+  $<span class="cm-property cm-error">animation-a</span>: (<span class="cm-string">'div'</span>: ( <span class="cm-variable">margin-left</span>: (<span class="cm-number">0ms</span>: <span class="cm-number">0</span>, <span class="cm-number">1000ms</span>: <span class="cm-number">50%</span>)));
+  $<span class="cm-property cm-error">animation-b</span>: (<span class="cm-string">'div'</span>: ( <span class="cm-variable">margin-left</span>: (<span class="cm-number">0ms</span>: <span class="cm-number">50%</span>, <span class="cm-number">1000ms</span>: <span class="cm-number">100%</span>)));
+
+  <span class="cm-def">@include</span> <span class="cm-tag">kf-chain</span>(
+    $<span class="cm-tag">animation-a</span>,
+    <span class="cm-tag">kf-sleep</span>(<span class="cm-number">2s</span>),
+    $<span class="cm-tag">animation-b</span>
+  );
+}
+</pre>
+      <pre class="source cm-s-default content-styling"><span class="cm-qualifier">.kf-sleep-example</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">20px</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+
+  $<span class="cm-property">size</span>: <span class="cm-number">20px</span>;
+
+  <span class="cm-property cm-error">div</span> {
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#888888</span>;
+    <span class="cm-property">width</span>: $<span class="cm-variable">size</span>;
+    <span class="cm-property">height</span>: $<span class="cm-variable">size</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#e8e8e8</span>;
+  }
+}
+</pre>
+      <pre class="source cm-s-default content-markup"><code><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">'kf-sleep-example'</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+</code></pre>
+    </div>
+    <a href="/editor#eyJtYXJrdXAiOiI8ZGl2IGNsYXNzPSdrZi1zbGVlcC1leGFtcGxlJz5cbiAgPGRpdj48L2Rpdj5cbjwvZGl2PlxuIiwic3R5bGluZyI6Ii5rZi1zbGVlcC1leGFtcGxlIHtcbiAgaGVpZ2h0OiAyMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICRzaXplOiAyMHB4O1xuXG4gIGRpdiB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGxlZnQ6IDA7XG4gICAgdG9wOiAwO1xuICAgIGJhY2tncm91bmQ6ICM4ODg4ODg7XG4gICAgd2lkdGg6ICRzaXplO1xuICAgIGhlaWdodDogJHNpemU7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2U4ZThlODtcbiAgfVxufVxuIiwiYW5pbWF0aW9uIjoiQGltcG9ydCBcImtmLnNjc3NcIjtcblxuLmtmLXNsZWVwLWV4YW1wbGUge1xuICAkYW5pbWF0aW9uLWE6ICgnZGl2JzogKCBtYXJnaW4tbGVmdDogKDBtczogMCwgMTAwMG1zOiA1MCUpKSk7XG4gICRhbmltYXRpb24tYjogKCdkaXYnOiAoIG1hcmdpbi1sZWZ0OiAoMG1zOiA1MCUsIDEwMDBtczogMTAwJSkpKTtcblxuICBAaW5jbHVkZSBrZi1jaGFpbihcbiAgICAkYW5pbWF0aW9uLWEsXG4gICAga2Ytc2xlZXAoMnMpLFxuICAgICRhbmltYXRpb24tYlxuICApO1xufVxuIn0=" target="_blank" class="button-edit">↥ <span class="text">Edit</span></a>
+    
+  </div>
+</div>
+<p></p>
+
+  
+  <div class="prev-next-bar">
+    
+      <a class="prev-next-bar-prev" href="/mixins/kf-reverse">
+        <div class="prev-next-bar-symbol">←</div>
+        <div class="prev-next-bar-page">kf-reverse</div>
+        <!--
+        <div class='prev-next-bar-desc'></div>
+        -->
+      </a>
+    
+
+    
+      <a class="prev-next-bar-next" href="/mixins/kf-stagger">
+        <div class="prev-next-bar-page">kf-stagger</div>
+        <div class="prev-next-bar-symbol">→</div>
+        <!--
+        <div class='prev-next-bar-desc'></div>
+        -->
+      </a>
+    
+  </div>
+
+
+
+  <!--
+  <footer class='footer'>
+  <a href="#">Github</a>
+  <a href="#">Editor</a>
+</footer>
+
+  -->
+</main>
+
+    </div>
+  
+
+</body></html>

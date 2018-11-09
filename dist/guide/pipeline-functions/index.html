@@ -1,0 +1,174 @@
+<html><head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/all.css">
+<script src="/app.js"></script>
+<script src="/sass.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    
+      <title>Kf - Sass Keyframe Animation Library</title>
+    
+  </head>
+  <body>
+    <div class="linkbar">
+      <a href="https://github.com/mil/kf-sass" target="_blank">Github</a>
+      <a href="https://www.npmjs.com/package/kf-sass" target="_blank">NPM</a>
+    </div>
+    <div class="wrap">
+      <sidebar class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-header-inner">
+      <div class="sidebar-header-overlay"></div>
+      <div class="sidebar-header-name"><a href="/"><span>K</span><span>f</span></a></div>
+      <div class="sidebar-header-subtext">Sass Keyframe Library</div>
+      <!--
+      <img class='sidebar-icon' src='/assets/github.svg'>
+      -->
+    </div>
+  </div>
+  <div class="sidebar-entries">
+    
+      <a class="l2 group-0 active" href="/guide">
+        Guide
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-0 " href="/guide/install">Install</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/animation-maps">Animation Maps</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/using-mixins">Using Mixins</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/easing-animations">Easing Animations</a>
+        
+          <a target="" class="l3 group-0 active" href="/guide/pipeline-functions">Pipeline Functions</a>
+        
+          <a target="" class="l3 group-0 " href="/guide/example-animations">Example Animations</a>
+        
+      
+    
+      <a class="l2 group-1 " href="/mixins">
+        Mixins
+          <!--
+          
+            <div class='caret'><div class='caret-inner'></div></div>
+          
+          -->
+      </a>
+      <div class="mobile-flexbreak"></div>
+      
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf">kf</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-chain">kf-chain</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-ease">kf-ease</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lag">kf-lag</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-lead">kf-lead</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-loop">kf-loop</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-mirror">kf-mirror</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-parallel">kf-parallel</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-reverse">kf-reverse</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-sleep">kf-sleep</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stagger">kf-stagger</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-stretch">kf-stretch</a>
+        
+          <a target="" class="l3 group-1 " href="/mixins/kf-debug">kf-debug</a>
+        
+      
+    
+  </div>
+</sidebar>
+
+      <main class="mainbar guide pipeline-functions">
+  
+  <div class="mainbar-header">
+    <div class="mainbar-header-inner">
+      
+        <h2><a href="/guide">Guide</a></h2>
+        <h1><strong>Pipeline Functions</strong></h1>
+      
+    </div>
+  </div>
+  
+
+  
+
+  <p>Using a pipeline function lets you apply a processing function to <em>all</em> animations (on a global basis).  For example, consider if you find yourself repeating <code>kf-loop</code> on all your animations because you want every animation on your site to loop indefinitely.</p>
+<p>There are two ways of doing this. You could either specify <code>kf-loop</code> around each animation, individually, or alternatively you could set the <code>kf-pipeline</code> to be <code>kf-loop</code> to apply this processing globally. As such the below two blocks are equivalent:</p>
+<pre><code class="language-scss"><div class="cm-s-default">// <span class="cm-tag">Without</span> <span class="cm-tag">a</span> <span class="cm-tag">pipeline-function</span>
+<span class="cm-def">@include</span> <span class="cm-tag">kf-loop</span>(<span class="cm-tag">kf-reverse</span>($<span class="cm-tag">animation-map-a</span>));
+<span class="cm-def">@include</span> <span class="cm-tag">kf-loop</span>(<span class="cm-tag">kf-stretch</span>(<span class="cm-number">0.5</span>, $<span class="cm-tag">animation-map-b</span>));
+<span class="cm-def">@include</span> <span class="cm-tag">kf-loop</span>($<span class="cm-tag">animation-map-c</span>);
+
+// <span class="cm-tag">With</span> <span class="cm-tag">a</span> <span class="cm-tag">pipeline</span> <span class="cm-tag">function</span>
+<span class="cm-def">@include</span> <span class="cm-tag">kf-pipeline</span>(<span class="cm-tag">kf-loop</span>);
+<span class="cm-def">@include</span> <span class="cm-tag">kf-reverse</span>($<span class="cm-tag">animation-map-a</span>);
+<span class="cm-def">@include</span> <span class="cm-tag">kf-stretch</span>(<span class="cm-number">0.5</span>, $<span class="cm-tag">animation-map-a</span>);
+<span class="cm-def">@include</span> <span class="cm-tag">kf</span>($<span class="cm-tag">animation-map-b</span>);
+</div></code></pre>
+<h4 id="custom_pipeline_functions">Custom Pipeline Functions</h4>
+<p>While any Kf mixin can be used as a pipeline function, you can also use custom Sass functions with kf-pipeline as well. For example to play all animations at half speed and then subsequently full speed:</p>
+<pre><code class="language-scss"><div class="cm-s-default"><span class="cm-def">@function</span> <span class="cm-tag">half-and-then-full-speed</span>($<span class="cm-tag">kf-map</span>) {
+  <span class="cm-def">@return</span> <span class="cm-tag">kf-chain</span>(
+    <span class="cm-tag">kf-stretch</span>($<span class="cm-tag">kf-map</span>, <span class="cm-number">0.5</span>),
+    $<span class="cm-tag">kf-map</span>
+  );
+}
+
+<span class="cm-def">@include</span> <span class="cm-tag">kf-pipeline</span>(<span class="cm-tag">half-and-then-full-speed</span>);
+</div></code></pre>
+
+  
+  <div class="prev-next-bar">
+    
+      <a class="prev-next-bar-prev" href="/guide/easing-animations">
+        <div class="prev-next-bar-symbol">←</div>
+        <div class="prev-next-bar-page">Easing Animations</div>
+        <!--
+        <div class='prev-next-bar-desc'></div>
+        -->
+      </a>
+    
+
+    
+      <a class="prev-next-bar-next" href="/guide/example-animations">
+        <div class="prev-next-bar-page">Example Animations</div>
+        <div class="prev-next-bar-symbol">→</div>
+        <!--
+        <div class='prev-next-bar-desc'></div>
+        -->
+      </a>
+    
+  </div>
+
+
+
+  <!--
+  <footer class='footer'>
+  <a href="#">Github</a>
+  <a href="#">Editor</a>
+</footer>
+
+  -->
+</main>
+
+    </div>
+  
+
+</body></html>

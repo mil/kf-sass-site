@@ -1,0 +1,17 @@
+.slide-cross-blink {
+  $slide-to-center: (
+    '.a': (margin-left: (0ms: 0%,   1250ms: 50%)),
+    '.b': (margin-left: (0ms: 100%, 1250ms: 50%)),
+  );
+  $blink-div: (
+    '.b': (
+      background: (0ms: white, 100ms: black, 200ms: white)
+    )
+  );
+
+  @include kf-chain(
+    $slide-to-center,
+    kf-loop(4, $blink-div),
+    kf-reverse($slide-to-center)
+  );
+}
