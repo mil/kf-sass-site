@@ -12,5 +12,8 @@ Building lots of Kf animations is alot faster through Dart Sass, as such, you'll
 Regenerate the entire site to the dist folder:
 `make build_all`
 
+Regenerate the entire site to the dist folder (use dart sass):
+`USE_DART_SASS=true make build_all`
+
 Continually watch source files and rebuilt site on any changes (requires `inotifywatch` and `xargs`):
 `make build_monitor`
