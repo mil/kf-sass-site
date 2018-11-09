@@ -13,7 +13,7 @@ next:
 
 You can either download the <a href="https://raw.githubusercontent.com/mil/kf-sass/master/dist/kf-<%= version %>.scss">single file import</a> via the latest Github relase or alternativly fetch Kf through its [NPM package](http://npmjs.com/package/kf-sass):
 ```bash
-npm install --save kf-scss
+npm install --save kf-sass
 ```
 
 Next simply import `kf.scss` as an import in your main SCSS/Sass file:
