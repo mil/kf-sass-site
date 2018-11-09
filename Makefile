@@ -58,7 +58,7 @@ html: make_dist_folder ## Rebuild HTML
 	./script/template.js
 scss: make_dist_folder ## Rebuild SCSS
 	@echo "Building SCSS; using dart sass? ($(USE_DART_SASS))"
-	time $(SASS_COMPILE_COMMAND) || true
+	$(SASS_COMPILE_COMMAND) || true
 	cp /tmp/cssbuild.css dist/all.css
 	./node_modules/browser-sync/dist/bin.js  reload --port 4080
 	@echo "Built SCSS ok!"
