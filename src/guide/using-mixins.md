@@ -14,7 +14,7 @@ next:
 Kf's [selection of mixins](/mixins) can be used in two ways. The first way is as a [top-level include](#using_a_mixin_normally) statement.  And the second way is [as the input for another mixin](#using_mixin_composability)'s animation map.
 
 #### Using a mixin normally:
-The first way you can use a Kf mixins with a traditional `@include` statement. Read the documentation for each [mixin](/mixins) to find out the parameters for each.
+The first way you can use a Kf mixin is with a traditional `@include` statement. Read the documentation for each [mixin](/mixins) to find out the parameters for each.
 
 Say for example, if you want to play an animation map in reverse you could use the [kf-reverse](/mixins/kf-reverse) mixin as:
 
