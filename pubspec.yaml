@@ -1,3 +1,3 @@
-name: kf-sass-site
+name: kf_sass_site
 dev_dependencies:
   sass: ^1.13.0
