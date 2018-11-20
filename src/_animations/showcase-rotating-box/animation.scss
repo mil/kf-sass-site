@@ -1,0 +1,19 @@
+.rotating-box-example {
+  $spin-animation: (
+    transform: (
+      0ms: rotate(0deg, 0deg),
+      1500ms: rotateY(360deg) rotateX(360deg),
+    )
+  );
+  $fade-out: (
+    background: (
+      0ms: white,
+      600ms:black
+    )
+  );
+
+  @include kf-chain(
+    $spin-animation,
+    kf-mirror($fade-out)
+  );
+}

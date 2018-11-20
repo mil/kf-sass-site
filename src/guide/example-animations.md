@@ -26,3 +26,8 @@ A more in-depth example showing how loops can be used to generate the inputs for
 An example showing how `kf-ease` and `kf-stretch` can be used to manipulate the easing and timing respectively of pre-built animations.
 
 <%= render_animation("guide-nesting-mixins-1") %>
+
+#### **Rotating box**:
+An example making use of the animating the `transform` property using `kf-chain`.
+
+<%= render_animation("showcase-rotating-box") %>
