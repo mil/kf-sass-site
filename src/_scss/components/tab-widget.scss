@@ -24,6 +24,8 @@
       @include fz(xs);
       float: right;
       &:hover .text { text-decoration: underline; }
+
+      .up:after { content: "↥"; }
     }
 
     &-seperator{

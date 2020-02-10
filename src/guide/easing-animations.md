@@ -12,7 +12,7 @@ next:
   name: Pipeline Functions
 ---
 
-Kf supports easing animations using [standard CSS easing functions](https://www.w3.org/TR/css-easing-1/) such as `ease-in` and additionally cubic bezier definitions such as `cubic-bezier(0,1,1,0)`. By default if easing is unset, Kf will use linear easing for all animations.
+Keyfram supports easing animations using [standard CSS easing functions](https://www.w3.org/TR/css-easing-1/) such as `ease-in` and additionally cubic bezier definitions such as `cubic-bezier(0,1,1,0)`. By default if easing is unset, Keyfram will use linear easing for all animations.
 
 You can ease animations both on a  [per-animation](#per-animation_easing) or [per-transition](#per-transition_easing) level. Notice below, in the first example using [kf-ease](/mixins/kf-ease), ease-in-out is applied to the sliding box transition in both directions, however in the second example since per-transition easing is used, the ease-in-out easing in only applied to the sliding box on the first transition.
 

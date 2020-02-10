@@ -62,3 +62,7 @@ scss: make_dist_folder ## Rebuild SCSS
 	cp /tmp/cssbuild.css dist/all.css
 	./node_modules/browser-sync/dist/bin.js  reload --port 4080
 	@echo "Built SCSS ok!"
+
+docker_build_all:
+	docker build -t keyfram-site .
+	docker run -v $(shell pwd)/dist:/app/dist keyfram-site make build_all

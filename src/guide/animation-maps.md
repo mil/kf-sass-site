@@ -10,7 +10,7 @@ next:
   name: Using Mixins
 ---
 
-Kf's [mixins](/mixins) all accept a common map format referred to as the *animation map*. The idea behind the animation map format is that you can represent any animation as a nested SCSS map specifying *timings*, *elements*, and *properties* as keys of the map. Two styles of maps are valid with all mixins:
+Keyfram's [mixins](/mixins) all accept a common map format referred to as the *animation map*. The idea behind the animation map format is that you can represent any animation as a nested SCSS map specifying *timings*, *elements*, and *properties* as keys of the map. Two styles of maps are valid with all mixins:
 
 #### 1. Implicit Selector Format
 If you are only interested in animating a **single selector** (or element), just specify a 2-level SCSS map with just *properties* and then *timings* as map keys. When unspecified, the selector to animate is implied to be the selector from where the mixin is called from:

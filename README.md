@@ -1,11 +1,11 @@
-# Kf Site
-Static site generator scripts to create the [kf-sass.com](http://kf-sass.com) site. Note this site generator is a bit pieced / hacked together - would eventually like to rebuild this. Was more focused on getting Kf's quality into good shape.
+# Keyfram.milesalan.com
+Static site generator scripts to create the [keyfram.milesalan.com](http://keyfram.milesalan.com) site.
 
 ## Setup
 Install dependencies with:
 `npm install`
 
-Building lots of Kf animations is alot faster through Dart Sass, as such, you'll probably also want to:
+Building lots of keyfram animations is alot faster through Dart Sass, as such, you'll probably also want to:
 `pub install`
 
 ## Development

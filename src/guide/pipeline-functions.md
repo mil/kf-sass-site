@@ -30,7 +30,7 @@ There are two ways of doing this. You could either specify `kf-loop` around each
 
 #### Custom Pipeline Functions
 
-While any Kf mixin can be used as a pipeline function, you can also use custom Sass functions with kf-pipeline as well. For example to play all animations at half speed and then subsequently full speed:
+While any Keyfram mixin can be used as a pipeline function, you can also use custom Sass functions with kf-pipeline as well. For example to play all animations at half speed and then subsequently full speed:
 
 ```scss
 @function half-and-then-full-speed($kf-map) {

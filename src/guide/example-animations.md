@@ -9,7 +9,7 @@ prev:
 ---
 
 
-As explained on the [using mixins](/guide/using-mixins/) guide page, Kf's mixins can be used can be used as **functions** and thus nested *within other mixins*. This feature of Kf let's you quickly compose complex animations that are difficult or impossible to accomplish using manual CSS keyframe specifications. This functionality is best illustrated by example so below are a few additional example animations making use of mixin composability.
+As explained on the [using mixins](/guide/using-mixins/) guide page, Keyfram's mixins can be used can be used as **functions** and thus nested *within other mixins*. This feature of Keyfram let's you quickly compose complex animations that are difficult or impossible to accomplish using manual CSS keyframe specifications. This functionality is best illustrated by example so below are a few additional example animations making use of mixin composability.
 
 #### **Basic slide cross blink**:
 Two sliding boxes coordinated to first join together, blink, and then reverse using `kf-chain`, `kf-loop`, and `kf-reverse`.

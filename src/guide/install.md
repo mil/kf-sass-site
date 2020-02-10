@@ -11,7 +11,7 @@ next:
   name: Animation Maps
 ---
 
-You can either download the <a href="https://raw.githubusercontent.com/mil/kf-sass/master/dist/kf-<%= version %>.scss">single file import</a> via the latest Github release or alternatively fetch Kf through its [NPM package](http://npmjs.com/package/kf-sass):
+You can either download the <a href="https://raw.githubusercontent.com/mil/kf-sass/master/dist/kf-<%= version %>.scss">single file import</a> via the latest Github release or alternatively fetch Keyfram through its [NPM package](http://npmjs.com/package/kf-sass):
 ```bash
 npm install --save kf-sass
 ```
@@ -23,4 +23,4 @@ Next simply import `kf.scss` as an import in your main SCSS/Sass file:
 ```
 
 #### Alternative: Live playground
-If you just want to play around before installing - you can use the <a href="<%= playground_link %>">live playground</a> instead which preloads Kf in a live [Sass.js](https://github.com/medialize/sass.js/) environment.
+If you just want to play around before installing - you can use the <a href="<%= playground_link %>">live playground</a> instead which preloads Keyfram in a live [Sass.js](https://github.com/medialize/sass.js/) environment.

@@ -5,7 +5,7 @@ section: '**Guide**'
 
 | Guide | Description |
 | -                                  | -                                                                         |
-| [Install](/guide/install) | How to install Kf locally using a single-file import or NPM |
+| [Install](/guide/install) | How to install Keyfram locally using a single-file import or NPM |
 | [Animation Map Format](/guide/animation-maps/)  | Learn about the common map format all mixins rely |
 | [Using Mixins](/guide/using-mixins/)  | How to use and nest the provided set of mixins |
 | [Easing Animations](/guide/easing-animations) | Learn how to set the easing between keyframe states|

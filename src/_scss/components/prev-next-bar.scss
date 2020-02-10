@@ -33,6 +33,8 @@
   }
 
   &-symbol {
+    &.next:after { content: "→"; }
+    &.prev:after { content: "←"; }
   }
   &-page {
     margin-bottom: -4px;
