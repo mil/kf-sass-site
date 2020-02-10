@@ -66,3 +66,6 @@ scss: make_dist_folder ## Rebuild SCSS
 docker_build_all:
 	docker build -t keyfram-site .
 	docker run -v $(shell pwd)/dist:/app/dist keyfram-site make build_all
+
+deploy:
+	@rsync -e "ssh -o StrictHostKeyChecking=no" -avh --delete dist/ $(USER_AT_SERVER):/home/public/keyfram.milesalan.com
